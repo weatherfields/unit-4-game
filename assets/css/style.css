@@ -1,0 +1,51 @@
+body {
+    background-image: url("../images/Awesome-Crystal-Wallpaper.jpg");
+   /* background-position: center; */
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.container {
+    border: solid 5px #ffffff;
+    background-color: #3a629c;
+    box-shadow: 0px 0px 9px 3px #fff;
+    width: 70%;
+    padding: 20px 20px 20px 20px;
+    margin: 40px auto;
+    color: #fff;
+}
+h1 {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+hr {
+    color: #ffffff;
+    border-top: 2px solid;
+}
+#directions {
+    font-family: 'Open Sans', sans-serif;
+}
+.col-12 {
+    text-align: center;
+}
+.col-6 {
+    text-align: center;
+}
+#totalscore {
+    text-align: center;
+}
+
+#crystal-well{
+    text-align: center;
+    list-style: none;
+   
+}
+
+li{
+    display:inline-block;
+    height:100px;
+    width:100px;
+    border:solid 2px rgb(165, 21, 21);
+    background-color: rgb(192, 102, 28);
+    box-shadow: 0px 0px 5px 2px #ffffff;
+}
