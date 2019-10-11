@@ -31,13 +31,34 @@ $(document).ready(function() {
     //     //if statements go here etc.
         
     //     };
+    function checkwl(){
+        if (currentScore == targetNumberValue) {
+            wins++;
+            // document.getElementById("#wins").innerHTML = wins;
+            $("#wins").text(wins);
+            alert("You Won! You must be in tune with the Magic Crystals! you have " + wins + " wins");
+            currentScore = 0;
+            targetNumberGenerator();
+        };
+        // What happens if the currentscore goes over the targetscore?
+        if (currentScore > targetNumberValue) {
+            losses++;
+            $("#losses").text(losses);
+            // document.getElementById("#losses").innerHTML = losses;
+            alert("You Lost! You should probably go meditate and get in tune with the Magic Crystals and your inner being! You have " + losses + "losses");
+            currentScore = 0;
+            targetNumberGenerator();
+            console.log('loss')
+        };
 
+    }
     // Add onClick functions for each button
     // When a button is clicked, increment the currentscore by the crystal value
     $("#crysclick1").click(function() {
         console.log('hitting function')
         currentScore += crystalOne;
         $('#currentscore').text(currentScore)
+        checkwl();
         // Below is another way to write line 39
         // currentscore = currentscore + crystalOne;
     });
@@ -45,35 +66,25 @@ $(document).ready(function() {
         console.log('hitting function')
         currentScore += crystalTwo;
         $('#currentscore').text(currentScore)
+        checkwl();
     });
     $("#crysclick3").click(function() {
         console.log('hitting function')
         currentScore += crystalThree;
         $('#currentscore').text(currentScore)
+        checkwl();
     });
     $("#crysclick4").click(function() {
         console.log('hitting function')
         currentScore += crystalFour;
         $('#currentscore').text(currentScore)
+        checkwl();
     });
+   
     // What happens if the currentscore is equal to the targetscore?
-    if (currentScore == targetNumberValue) {
-        wins++;
-        document.getElementById("wins").textContent = wins;
-        alert("You Won! You must be in tune with the Magic Crystals! you have " + wins + " wins");
-        currentScore = 0;
-        targetNumberGenerator();
-    };
-    // What happens if the currentscore goes over the targetscore?
-    if (currentScore > targetNumberValue) {
-        losses++;
-        document.getElementById("losses").textContent = losses;
-        alert("You Lost! You should probably go meditate and get in tune with the Magic Crystals and your inner being! You have " + losses + "losses");
-        currentScore = 0;
-        targetNumberGenerator();
-    };
 
 });
+
 
     
 // There will be four crystals displayed as buttons on the page.
