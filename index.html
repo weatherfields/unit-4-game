@@ -21,42 +21,53 @@
         <h1>Crystals Collector</h1>
         <hr>
         <div id="directions">
-            <p>Welcome to the Crystals Collector Game! The number you see below is your Target Number.</p>
-            <p>The four crystals below the Target Number each contain their own randomized value. You do not know what their value is
-                until you click on them.</p>
+            <h2>Welcome Crystals Collector! The game where your alignment with the source energy that creates worlds is
+                put to the test!</h2>
+            <p>The number you see below is the Target Number, which must be equaled in order to win.</p>
+            <p>The four crystals below the Target Number each contain a unique randomized value. Your spiritual
+                alignment with the source energy indicates what those values actually are.</p>
             <p>To win, you need to match the total of the crystals to the Target Number. You will lose if you go over
                 the Target Number.</p>
             <p>When you lose, the game will restart with a new Target Number and new values for each crystal.</p>
         </div>
-    <div class="row">
-        <div class="col-12">Target Number: <span id="targetNumber"> </span> </div>
-    </div> <!-- Row -->
-    <br>
-    <div class="row">
-    <div class="col-12">
-            <p>Your Current Number: </p>
-            <p><span id="currentscore"></span></p>
-    </div>
-    </div> <!-- Row -->
-    <ul id="crystal-well">
-        <!-- Add ID to each LI element and call click function on that -->
-    <li id="crysclick1"><img src="assets/images/2.png" alt="gamecrystal1" width="100" height="100" id="test2"></li>
-    <li id="crysclick2"><img src="assets/images/4.png" alt="gamecrystal2" width="100" height="100"></li>
-    <li id="crysclick3"><img src="assets/images/10.png" alt="gamecrystal3" width="100" height="100"></li>
-    <li id="crysclick4"><img src="assets/images/16.png" alt="gamecrystal4" width="100" height="100"></li>
-    </ul> 
-    <div class="row">
-            <div class="col-6">
-                    <p>Wins: </p>
-                    <p><span id="wins"></span></p>
-            </div> <!-- wins column -->
-            <div class="col-6">
-                    <p>Losses: </p>
-                    <p><span id="losses"></span></p>
-            </div> <!-- Losses Column -->
-        </div> <!-- Wins/Losses Row -->
+        <hr>
+        <ul id="score-well">
+            <div class="row">
+                <div class="col-md-3 img-fluid"></div>
+                <div class="col-md-3 img-fluid">
+                    <li class="scoreboxes">Target Number: <span id="targetNumber"></span></li>
+                </div> <!-- col1 -->
+                <div class="col-md-3 img-fluid">
+                    <li class="scoreboxes">Your Current Number: <span id="currentscore"></span> </li>
+                </div> <!-- col2 -->
+                <div class="col-md-3 img-fluid"></div>
+            </div> <!-- Row -->
+        </ul>
+        <ul id="crystal-well">
+            <!-- Add ID to each LI element and call click function on that -->
+            <li id="crysclick1" class="crystalist"><img src="assets/images/2.png" alt="gamecrystal1" width="100"
+                    height="100" id="test2"></li>
+            <li id="crysclick2" class="crystalist"><img src="assets/images/4.png" alt="gamecrystal2" width="100"
+                    height="100"></li>
+            <li id="crysclick3" class="crystalist"><img src="assets/images/10.png" alt="gamecrystal3" width="100"
+                    height="100"></li>
+            <li id="crysclick4" class="crystalist"><img src="assets/images/16.png" alt="gamecrystal4" width="100"
+                    height="100"></li>
+        </ul>
+        <ul id="score-well-2">
+            <div class="row">
+                <div class="col-md-3 img-fluid"></div>
+                <div class="col-md-3 img-fluid">
+                    <li class="win-loss-box">Wins: <span id="wins"></span></li>
+                </div> <!-- wins column -->
+                <div class="col-md-3 img-fluid">
+                    <li class="win-loss-box">Losses: <span id="losses"></span></li>
+                </div> <!-- Losses Column -->
+                <div class="col-md-3 img-fluid"></div>
+            </div> <!-- Wins/Losses Row -->
+        </ul>
         <script src="assets/javascript/game.js"></script>
-</div> <!-- body container -->
+    </div> <!-- body container -->
 </body>
 
 </html>

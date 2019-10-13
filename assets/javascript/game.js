@@ -1,4 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
+    // I left all of my notes and unused code in again to try to help explain how I got it to work.
+    
     // At start of game, randomly generate target number 
     let targetNumberValue;
     // Wins, Losses, and Total Score are displayed on the screen
@@ -14,47 +16,55 @@ $(document).ready(function() {
 
     //create function that generates a random number
 
-    function targetNumberGenerator(){
+    function targetNumberGenerator() {
         targetNumberValue = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
     }
 
+    function reset() {
+        currentScore = 0;
+        document.getElementById("currentscore").innerHTML = currentScore;
+        targetNumberGenerator();
+        $('#targetNumber').text(targetNumberValue);
+    }
     // $('#oneValue').text(crystalOne);
     // $('#twoValue').text(crystalTwo);
     // $('#threeValue').text(crystalThree);
     // $('#fourValue').text(crystalFour);
     $('#targetNumber').text(targetNumberValue);
     $('#currentscore').text(currentScore);
-    
+
 
     // $('#crystal-well').on('click', 'li' function(){
     //      //do stuff when someone clicks on any crystal list item
     //     //if statements go here etc.
-        
+
     //     };
-    function checkwl(){
+    function checkwl() {
         if (currentScore == targetNumberValue) {
             wins++;
             // document.getElementById("#wins").innerHTML = wins;
             $("#wins").text(wins);
             alert("You Won! You must be in tune with the Magic Crystals! you have " + wins + " wins");
-            currentScore = 0;
-            targetNumberGenerator();
+            // currentScore = 0;
+            // targetNumberGenerator();
+            reset();
         };
         // What happens if the currentscore goes over the targetscore?
         if (currentScore > targetNumberValue) {
             losses++;
             $("#losses").text(losses);
             // document.getElementById("#losses").innerHTML = losses;
-            alert("You Lost! You should probably go meditate and get in tune with the Magic Crystals and your inner being! You have " + losses + "losses");
-            currentScore = 0;
-            targetNumberGenerator();
-            console.log('loss')
+            alert("You Lost! You should probably go meditate and get in tune with the Magic Crystals ... and your inner being! You have " + losses + " losses");
+            // currentScore = 0;
+            // targetNumberGenerator();
+            // console.log('loss')
+            reset();
         };
 
     }
     // Add onClick functions for each button
     // When a button is clicked, increment the currentscore by the crystal value
-    $("#crysclick1").click(function() {
+    $("#crysclick1").click(function () {
         console.log('hitting function')
         currentScore += crystalOne;
         $('#currentscore').text(currentScore)
@@ -62,31 +72,31 @@ $(document).ready(function() {
         // Below is another way to write line 39
         // currentscore = currentscore + crystalOne;
     });
-    $("#crysclick2").click(function() {
+    $("#crysclick2").click(function () {
         console.log('hitting function')
         currentScore += crystalTwo;
         $('#currentscore').text(currentScore)
         checkwl();
     });
-    $("#crysclick3").click(function() {
+    $("#crysclick3").click(function () {
         console.log('hitting function')
         currentScore += crystalThree;
         $('#currentscore').text(currentScore)
         checkwl();
     });
-    $("#crysclick4").click(function() {
+    $("#crysclick4").click(function () {
         console.log('hitting function')
         currentScore += crystalFour;
         $('#currentscore').text(currentScore)
         checkwl();
     });
-   
+
     // What happens if the currentscore is equal to the targetscore?
 
 });
 
 
-    
+
 // There will be four crystals displayed as buttons on the page.
 
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score.

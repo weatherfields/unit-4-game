@@ -1,51 +1,92 @@
 body {
-    background-image: url("../images/Awesome-Crystal-Wallpaper.jpg");
-   /* background-position: center; */
-   background-repeat: no-repeat;
-   background-size: cover;
+    background-image: url("../images/crystal-mine.jpg");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .container {
     border: solid 5px #ffffff;
     background-color: #3a629c;
-    box-shadow: 0px 0px 9px 3px #fff;
+    box-shadow: 0px 0px 9px 3px rgb(206, 205, 205);
     width: 70%;
     padding: 20px 20px 20px 20px;
     margin: 40px auto;
     color: #fff;
 }
+
 h1 {
+    font-size: 4vw;
     font-family: 'Monoton', cursive;
     text-align: center;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 0px 5px 10px rgb(192, 102, 28);
 }
+
+h2 {
+    font-size: 15px;
+}
+
 hr {
-    color: #ffffff;
-    border-top: 2px solid;
+    color: #b8b8b8;
+    border-top: 1px solid;
 }
+
+p {
+    font-size: 14px;
+}
+
 #directions {
     font-family: 'Open Sans', sans-serif;
 }
+
 .col-12 {
     text-align: center;
 }
+
 .col-6 {
     text-align: center;
 }
-#totalscore {
-    text-align: center;
-}
 
-#crystal-well{
+#crystal-well {
     text-align: center;
     list-style: none;
-   
+
 }
 
-li{
-    display:inline-block;
-    height:100px;
-    width:100px;
-    border:solid 2px rgb(165, 21, 21);
+#score-well {
+    text-align: center;
+    list-style: none;
+
+}
+
+#score-well-2 {
+    text-align: center;
+    list-style: none;
+}
+
+.crystalist {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: solid 2px rgb(255, 223, 43);
+    background-color: #803b03;
+    box-shadow: 0px 0px 10px 3px #ffffff;
+}
+
+.scoreboxes {
+    display: inline-block;
+    height: 60px;
+    width: 125px;
+    border: solid 2px rgb(154, 201, 78);
     background-color: rgb(192, 102, 28);
-    box-shadow: 0px 0px 5px 2px #ffffff;
+    box-shadow: 0px 0px 5px 2px #bebebe;
+}
+
+.win-loss-box {
+    display: inline-block;
+    height: 30px;
+    width: 125px;
+    border: solid 2px rgb(154, 201, 78);
+    background-color: rgb(192, 102, 28);
+    box-shadow: 0px 0px 5px 2px #bebebe;
 }
